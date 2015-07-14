@@ -1,0 +1,1211 @@
+fileFormatVersion: 2
+guid: 263fc86fa21868e4d9286a981cb44f4a
+timeCreated: 1432656166
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Hydra
+    100002: //RootNode
+    100004: Hydra 1
+    100006: LizardHub002
+    100008: LizardHub002Bone002
+    100010: LizardHub002Bone002Bone001
+    100012: LizardHub002Bone002Bone002
+    100014: LizardHub002Bone002Bone003
+    100016: LizardHub002Bone003
+    100018: LizardHub002Bone004
+    100020: LizardHub003
+    100022: LizardHub004
+    100024: LizardLFrontLegCollarbone
+    100026: LizardLFrontLegDigit01
+    100028: LizardLFrontLegLower
+    100030: LizardLFrontLegPalm2
+    100032: LizardLFrontLegPlatform
+    100034: LizardLFrontLegUpper
+    100036: LizardLLegAnkle1
+    100038: LizardLLegAnkle2
+    100040: LizardLLegCalf
+    100042: LizardLLegDigit01
+    100044: LizardLLegPlatform
+    100046: LizardLLegThigh
+    100048: LizardNeck012
+    100050: LizardNeck013
+    100052: LizardNeck014
+    100054: LizardNeck015
+    100056: LizardNeck016
+    100058: LizardNeck017
+    100060: LizardNeck018
+    100062: LizardNeck019
+    100064: LizardNeck020
+    100066: LizardNeck021
+    100068: LizardNeck022
+    100070: LizardNeck023
+    100072: LizardNeck024
+    100074: LizardNeck025
+    100076: LizardNeck026
+    100078: LizardNeck027
+    100080: LizardNeck028
+    100082: LizardNeck029
+    100084: LizardNeck030
+    100086: LizardNeck031
+    100088: LizardNeck032
+    100090: LizardNeck033
+    100092: LizardNeck1
+    100094: LizardNeck10
+    100096: LizardNeck11
+    100098: LizardNeck2
+    100100: LizardNeck3
+    100102: LizardNeck4
+    100104: LizardNeck5
+    100106: LizardNeck6
+    100108: LizardNeck7
+    100110: LizardNeck8
+    100112: LizardNeck9
+    100114: LizardPelvis
+    100116: LizardRFrontLegCollarbone
+    100118: LizardRFrontLegDigit01
+    100120: LizardRFrontLegLower
+    100122: LizardRFrontLegPalm2
+    100124: LizardRFrontLegPlatform
+    100126: LizardRFrontLegUpper
+    100128: LizardRibcage
+    100130: LizardRRearLegAnkle1
+    100132: LizardRRearLegAnkle2
+    100134: LizardRRearLegCalf
+    100136: LizardRRearLegDigit01
+    100138: LizardRRearLegPlatform
+    100140: LizardRRearLegThigh
+    100142: LizardSpine1
+    100144: LizardSpine2
+    100146: LizardSpine3
+    100148: LizardTail1
+    100150: LizardTail10
+    100152: LizardTail2
+    100154: LizardTail3
+    100156: LizardTail4
+    100158: LizardTail5
+    100160: LizardTail6
+    100162: LizardTail7
+    100164: LizardTail8
+    100166: LizardTail9
+    400000: Hydra
+    400002: //RootNode
+    400004: Hydra 1
+    400006: LizardHub002
+    400008: LizardHub002Bone002
+    400010: LizardHub002Bone002Bone001
+    400012: LizardHub002Bone002Bone002
+    400014: LizardHub002Bone002Bone003
+    400016: LizardHub002Bone003
+    400018: LizardHub002Bone004
+    400020: LizardHub003
+    400022: LizardHub004
+    400024: LizardLFrontLegCollarbone
+    400026: LizardLFrontLegDigit01
+    400028: LizardLFrontLegLower
+    400030: LizardLFrontLegPalm2
+    400032: LizardLFrontLegPlatform
+    400034: LizardLFrontLegUpper
+    400036: LizardLLegAnkle1
+    400038: LizardLLegAnkle2
+    400040: LizardLLegCalf
+    400042: LizardLLegDigit01
+    400044: LizardLLegPlatform
+    400046: LizardLLegThigh
+    400048: LizardNeck012
+    400050: LizardNeck013
+    400052: LizardNeck014
+    400054: LizardNeck015
+    400056: LizardNeck016
+    400058: LizardNeck017
+    400060: LizardNeck018
+    400062: LizardNeck019
+    400064: LizardNeck020
+    400066: LizardNeck021
+    400068: LizardNeck022
+    400070: LizardNeck023
+    400072: LizardNeck024
+    400074: LizardNeck025
+    400076: LizardNeck026
+    400078: LizardNeck027
+    400080: LizardNeck028
+    400082: LizardNeck029
+    400084: LizardNeck030
+    400086: LizardNeck031
+    400088: LizardNeck032
+    400090: LizardNeck033
+    400092: LizardNeck1
+    400094: LizardNeck10
+    400096: LizardNeck11
+    400098: LizardNeck2
+    400100: LizardNeck3
+    400102: LizardNeck4
+    400104: LizardNeck5
+    400106: LizardNeck6
+    400108: LizardNeck7
+    400110: LizardNeck8
+    400112: LizardNeck9
+    400114: LizardPelvis
+    400116: LizardRFrontLegCollarbone
+    400118: LizardRFrontLegDigit01
+    400120: LizardRFrontLegLower
+    400122: LizardRFrontLegPalm2
+    400124: LizardRFrontLegPlatform
+    400126: LizardRFrontLegUpper
+    400128: LizardRibcage
+    400130: LizardRRearLegAnkle1
+    400132: LizardRRearLegAnkle2
+    400134: LizardRRearLegCalf
+    400136: LizardRRearLegDigit01
+    400138: LizardRRearLegPlatform
+    400140: LizardRRearLegThigh
+    400142: LizardSpine1
+    400144: LizardSpine2
+    400146: LizardSpine3
+    400148: LizardTail1
+    400150: LizardTail10
+    400152: LizardTail2
+    400154: LizardTail3
+    400156: LizardTail4
+    400158: LizardTail5
+    400160: LizardTail6
+    400162: LizardTail7
+    400164: LizardTail8
+    400166: LizardTail9
+    4300000: Hydra
+    7400000: Idle
+    7400002: attack
+    7400004: block
+    7400006: ' attack successful'
+    7400008: death
+    9500000: //RootNode
+    13700000: Hydra
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 99
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hydra
+        weight: 1
+      - path: Hydra 1
+        weight: 1
+      - path: LizardLFrontLegPlatform
+        weight: 1
+      - path: LizardLLegPlatform
+        weight: 1
+      - path: LizardPelvis
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh/LizardLLegCalf
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh/LizardLLegCalf/LizardLLegAnkle1
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh/LizardLLegCalf/LizardLLegAnkle1/LizardLLegAnkle2
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh/LizardLLegCalf/LizardLLegAnkle1/LizardLLegAnkle2/LizardLLegDigit01
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh/LizardRRearLegCalf
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh/LizardRRearLegCalf/LizardRRearLegAnkle1
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh/LizardRRearLegCalf/LizardRRearLegAnkle1/LizardRRearLegAnkle2
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh/LizardRRearLegCalf/LizardRRearLegAnkle1/LizardRRearLegAnkle2/LizardRRearLegDigit01
+        weight: 1
+      - path: LizardPelvis/LizardSpine1
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone/LizardLFrontLegUpper
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone/LizardLFrontLegUpper/LizardLFrontLegLower
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone/LizardLFrontLegUpper/LizardLFrontLegLower/LizardLFrontLegPalm2
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone/LizardLFrontLegUpper/LizardLFrontLegLower/LizardLFrontLegPalm2/LizardLFrontLegDigit01
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10/LizardNeck11
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10/LizardNeck11/LizardHub002
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10/LizardNeck11/LizardHub002/LizardHub002Bone002
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10/LizardNeck11/LizardHub002/LizardHub002Bone002/LizardHub002Bone002Bone001
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019/LizardNeck020
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019/LizardNeck020/LizardHub003
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019/LizardNeck020/LizardHub003/LizardHub002Bone003
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019/LizardNeck020/LizardHub003/LizardHub002Bone003/LizardHub002Bone002Bone002
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032/LizardNeck033
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032/LizardNeck033/LizardHub004
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032/LizardNeck033/LizardHub004/LizardHub002Bone004
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032/LizardNeck033/LizardHub004/LizardHub002Bone004/LizardHub002Bone002Bone003
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone/LizardRFrontLegUpper
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone/LizardRFrontLegUpper/LizardRFrontLegLower
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone/LizardRFrontLegUpper/LizardRFrontLegLower/LizardRFrontLegPalm2
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone/LizardRFrontLegUpper/LizardRFrontLegLower/LizardRFrontLegPalm2/LizardRFrontLegDigit01
+        weight: 1
+      - path: LizardPelvis/LizardTail1
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6/LizardTail7
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6/LizardTail7/LizardTail8
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6/LizardTail7/LizardTail8/LizardTail9
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6/LizardTail7/LizardTail8/LizardTail9/LizardTail10
+        weight: 1
+      - path: LizardRFrontLegPlatform
+        weight: 1
+      - path: LizardRRearLegPlatform
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: attack
+      takeName: Take 001
+      firstFrame: 100
+      lastFrame: 237
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hydra
+        weight: 1
+      - path: Hydra 1
+        weight: 1
+      - path: LizardLFrontLegPlatform
+        weight: 1
+      - path: LizardLLegPlatform
+        weight: 1
+      - path: LizardPelvis
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh/LizardLLegCalf
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh/LizardLLegCalf/LizardLLegAnkle1
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh/LizardLLegCalf/LizardLLegAnkle1/LizardLLegAnkle2
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh/LizardLLegCalf/LizardLLegAnkle1/LizardLLegAnkle2/LizardLLegDigit01
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh/LizardRRearLegCalf
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh/LizardRRearLegCalf/LizardRRearLegAnkle1
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh/LizardRRearLegCalf/LizardRRearLegAnkle1/LizardRRearLegAnkle2
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh/LizardRRearLegCalf/LizardRRearLegAnkle1/LizardRRearLegAnkle2/LizardRRearLegDigit01
+        weight: 1
+      - path: LizardPelvis/LizardSpine1
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone/LizardLFrontLegUpper
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone/LizardLFrontLegUpper/LizardLFrontLegLower
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone/LizardLFrontLegUpper/LizardLFrontLegLower/LizardLFrontLegPalm2
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone/LizardLFrontLegUpper/LizardLFrontLegLower/LizardLFrontLegPalm2/LizardLFrontLegDigit01
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10/LizardNeck11
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10/LizardNeck11/LizardHub002
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10/LizardNeck11/LizardHub002/LizardHub002Bone002
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10/LizardNeck11/LizardHub002/LizardHub002Bone002/LizardHub002Bone002Bone001
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019/LizardNeck020
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019/LizardNeck020/LizardHub003
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019/LizardNeck020/LizardHub003/LizardHub002Bone003
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019/LizardNeck020/LizardHub003/LizardHub002Bone003/LizardHub002Bone002Bone002
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032/LizardNeck033
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032/LizardNeck033/LizardHub004
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032/LizardNeck033/LizardHub004/LizardHub002Bone004
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032/LizardNeck033/LizardHub004/LizardHub002Bone004/LizardHub002Bone002Bone003
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone/LizardRFrontLegUpper
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone/LizardRFrontLegUpper/LizardRFrontLegLower
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone/LizardRFrontLegUpper/LizardRFrontLegLower/LizardRFrontLegPalm2
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone/LizardRFrontLegUpper/LizardRFrontLegLower/LizardRFrontLegPalm2/LizardRFrontLegDigit01
+        weight: 1
+      - path: LizardPelvis/LizardTail1
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6/LizardTail7
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6/LizardTail7/LizardTail8
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6/LizardTail7/LizardTail8/LizardTail9
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6/LizardTail7/LizardTail8/LizardTail9/LizardTail10
+        weight: 1
+      - path: LizardRFrontLegPlatform
+        weight: 1
+      - path: LizardRRearLegPlatform
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: block
+      takeName: Take 001
+      firstFrame: 238
+      lastFrame: 266
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hydra
+        weight: 1
+      - path: Hydra 1
+        weight: 1
+      - path: LizardLFrontLegPlatform
+        weight: 1
+      - path: LizardLLegPlatform
+        weight: 1
+      - path: LizardPelvis
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh/LizardLLegCalf
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh/LizardLLegCalf/LizardLLegAnkle1
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh/LizardLLegCalf/LizardLLegAnkle1/LizardLLegAnkle2
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh/LizardLLegCalf/LizardLLegAnkle1/LizardLLegAnkle2/LizardLLegDigit01
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh/LizardRRearLegCalf
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh/LizardRRearLegCalf/LizardRRearLegAnkle1
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh/LizardRRearLegCalf/LizardRRearLegAnkle1/LizardRRearLegAnkle2
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh/LizardRRearLegCalf/LizardRRearLegAnkle1/LizardRRearLegAnkle2/LizardRRearLegDigit01
+        weight: 1
+      - path: LizardPelvis/LizardSpine1
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone/LizardLFrontLegUpper
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone/LizardLFrontLegUpper/LizardLFrontLegLower
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone/LizardLFrontLegUpper/LizardLFrontLegLower/LizardLFrontLegPalm2
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone/LizardLFrontLegUpper/LizardLFrontLegLower/LizardLFrontLegPalm2/LizardLFrontLegDigit01
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10/LizardNeck11
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10/LizardNeck11/LizardHub002
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10/LizardNeck11/LizardHub002/LizardHub002Bone002
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10/LizardNeck11/LizardHub002/LizardHub002Bone002/LizardHub002Bone002Bone001
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019/LizardNeck020
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019/LizardNeck020/LizardHub003
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019/LizardNeck020/LizardHub003/LizardHub002Bone003
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019/LizardNeck020/LizardHub003/LizardHub002Bone003/LizardHub002Bone002Bone002
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032/LizardNeck033
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032/LizardNeck033/LizardHub004
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032/LizardNeck033/LizardHub004/LizardHub002Bone004
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032/LizardNeck033/LizardHub004/LizardHub002Bone004/LizardHub002Bone002Bone003
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone/LizardRFrontLegUpper
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone/LizardRFrontLegUpper/LizardRFrontLegLower
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone/LizardRFrontLegUpper/LizardRFrontLegLower/LizardRFrontLegPalm2
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone/LizardRFrontLegUpper/LizardRFrontLegLower/LizardRFrontLegPalm2/LizardRFrontLegDigit01
+        weight: 1
+      - path: LizardPelvis/LizardTail1
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6/LizardTail7
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6/LizardTail7/LizardTail8
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6/LizardTail7/LizardTail8/LizardTail9
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6/LizardTail7/LizardTail8/LizardTail9/LizardTail10
+        weight: 1
+      - path: LizardRFrontLegPlatform
+        weight: 1
+      - path: LizardRRearLegPlatform
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: ' attack successful'
+      takeName: Take 001
+      firstFrame: 352
+      lastFrame: 383
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hydra
+        weight: 1
+      - path: Hydra 1
+        weight: 1
+      - path: LizardLFrontLegPlatform
+        weight: 1
+      - path: LizardLLegPlatform
+        weight: 1
+      - path: LizardPelvis
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh/LizardLLegCalf
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh/LizardLLegCalf/LizardLLegAnkle1
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh/LizardLLegCalf/LizardLLegAnkle1/LizardLLegAnkle2
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh/LizardLLegCalf/LizardLLegAnkle1/LizardLLegAnkle2/LizardLLegDigit01
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh/LizardRRearLegCalf
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh/LizardRRearLegCalf/LizardRRearLegAnkle1
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh/LizardRRearLegCalf/LizardRRearLegAnkle1/LizardRRearLegAnkle2
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh/LizardRRearLegCalf/LizardRRearLegAnkle1/LizardRRearLegAnkle2/LizardRRearLegDigit01
+        weight: 1
+      - path: LizardPelvis/LizardSpine1
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone/LizardLFrontLegUpper
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone/LizardLFrontLegUpper/LizardLFrontLegLower
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone/LizardLFrontLegUpper/LizardLFrontLegLower/LizardLFrontLegPalm2
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone/LizardLFrontLegUpper/LizardLFrontLegLower/LizardLFrontLegPalm2/LizardLFrontLegDigit01
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10/LizardNeck11
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10/LizardNeck11/LizardHub002
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10/LizardNeck11/LizardHub002/LizardHub002Bone002
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10/LizardNeck11/LizardHub002/LizardHub002Bone002/LizardHub002Bone002Bone001
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019/LizardNeck020
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019/LizardNeck020/LizardHub003
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019/LizardNeck020/LizardHub003/LizardHub002Bone003
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019/LizardNeck020/LizardHub003/LizardHub002Bone003/LizardHub002Bone002Bone002
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032/LizardNeck033
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032/LizardNeck033/LizardHub004
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032/LizardNeck033/LizardHub004/LizardHub002Bone004
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032/LizardNeck033/LizardHub004/LizardHub002Bone004/LizardHub002Bone002Bone003
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone/LizardRFrontLegUpper
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone/LizardRFrontLegUpper/LizardRFrontLegLower
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone/LizardRFrontLegUpper/LizardRFrontLegLower/LizardRFrontLegPalm2
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone/LizardRFrontLegUpper/LizardRFrontLegLower/LizardRFrontLegPalm2/LizardRFrontLegDigit01
+        weight: 1
+      - path: LizardPelvis/LizardTail1
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6/LizardTail7
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6/LizardTail7/LizardTail8
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6/LizardTail7/LizardTail8/LizardTail9
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6/LizardTail7/LizardTail8/LizardTail9/LizardTail10
+        weight: 1
+      - path: LizardRFrontLegPlatform
+        weight: 1
+      - path: LizardRRearLegPlatform
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: death
+      takeName: Take 001
+      firstFrame: 384
+      lastFrame: 435
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hydra
+        weight: 1
+      - path: Hydra 1
+        weight: 1
+      - path: LizardLFrontLegPlatform
+        weight: 1
+      - path: LizardLLegPlatform
+        weight: 1
+      - path: LizardPelvis
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh/LizardLLegCalf
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh/LizardLLegCalf/LizardLLegAnkle1
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh/LizardLLegCalf/LizardLLegAnkle1/LizardLLegAnkle2
+        weight: 1
+      - path: LizardPelvis/LizardLLegThigh/LizardLLegCalf/LizardLLegAnkle1/LizardLLegAnkle2/LizardLLegDigit01
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh/LizardRRearLegCalf
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh/LizardRRearLegCalf/LizardRRearLegAnkle1
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh/LizardRRearLegCalf/LizardRRearLegAnkle1/LizardRRearLegAnkle2
+        weight: 1
+      - path: LizardPelvis/LizardRRearLegThigh/LizardRRearLegCalf/LizardRRearLegAnkle1/LizardRRearLegAnkle2/LizardRRearLegDigit01
+        weight: 1
+      - path: LizardPelvis/LizardSpine1
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone/LizardLFrontLegUpper
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone/LizardLFrontLegUpper/LizardLFrontLegLower
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone/LizardLFrontLegUpper/LizardLFrontLegLower/LizardLFrontLegPalm2
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardLFrontLegCollarbone/LizardLFrontLegUpper/LizardLFrontLegLower/LizardLFrontLegPalm2/LizardLFrontLegDigit01
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10/LizardNeck11
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10/LizardNeck11/LizardHub002
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10/LizardNeck11/LizardHub002/LizardHub002Bone002
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck1/LizardNeck2/LizardNeck3/LizardNeck4/LizardNeck5/LizardNeck6/LizardNeck7/LizardNeck8/LizardNeck9/LizardNeck10/LizardNeck11/LizardHub002/LizardHub002Bone002/LizardHub002Bone002Bone001
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019/LizardNeck020
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019/LizardNeck020/LizardHub003
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019/LizardNeck020/LizardHub003/LizardHub002Bone003
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck021/LizardNeck022/LizardNeck013/LizardNeck014/LizardNeck015/LizardNeck016/LizardNeck012/LizardNeck017/LizardNeck018/LizardNeck019/LizardNeck020/LizardHub003/LizardHub002Bone003/LizardHub002Bone002Bone002
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032/LizardNeck033
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032/LizardNeck033/LizardHub004
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032/LizardNeck033/LizardHub004/LizardHub002Bone004
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardNeck023/LizardNeck024/LizardNeck025/LizardNeck026/LizardNeck027/LizardNeck028/LizardNeck029/LizardNeck030/LizardNeck031/LizardNeck032/LizardNeck033/LizardHub004/LizardHub002Bone004/LizardHub002Bone002Bone003
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone/LizardRFrontLegUpper
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone/LizardRFrontLegUpper/LizardRFrontLegLower
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone/LizardRFrontLegUpper/LizardRFrontLegLower/LizardRFrontLegPalm2
+        weight: 1
+      - path: LizardPelvis/LizardSpine1/LizardSpine2/LizardSpine3/LizardRibcage/LizardRFrontLegCollarbone/LizardRFrontLegUpper/LizardRFrontLegLower/LizardRFrontLegPalm2/LizardRFrontLegDigit01
+        weight: 1
+      - path: LizardPelvis/LizardTail1
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6/LizardTail7
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6/LizardTail7/LizardTail8
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6/LizardTail7/LizardTail8/LizardTail9
+        weight: 1
+      - path: LizardPelvis/LizardTail1/LizardTail2/LizardTail3/LizardTail4/LizardTail5/LizardTail6/LizardTail7/LizardTail8/LizardTail9/LizardTail10
+        weight: 1
+      - path: LizardRFrontLegPlatform
+        weight: 1
+      - path: LizardRRearLegPlatform
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
