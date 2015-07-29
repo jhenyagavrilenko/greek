@@ -46,6 +46,45 @@ public class Logic : MonoBehaviour
 		SetBattle(17, "lennondtps@gmail.com"); //lennondtps@gmail.com  player@email.gr
 	}
 
+	//Zanko
+	private void attack(){
+
+
+		float time = 0.01F;
+
+		AnimationHelper.MoveGO(leftPlayer, enemyAnimation.Start(), enemyAnimation.HitSuc(), time);
+		AnimationHelper.MoveGO(rightPlayer, enemyAnimation.EStart(), enemyAnimation.EHitSuc(), time);
+		AnimationHelper.MoveGO(objectHolder.camera.gameObject, enemyAnimation.CStart(), enemyAnimation.CHitSuc(), 0.5F);
+
+
+		StartCoroutine(ExecuteAfterTime(time));
+	}
+
+	IEnumerator ExecuteAfterTime(float time)
+	{
+		yield return new WaitForSeconds(time);
+
+		Animator[] anims;
+		anims = leftPlayer.GetComponentsInChildren<Animator>();
+		
+		foreach (Animator anim in anims)
+		{
+			anim.SetTrigger("NormalHit");
+		}
+		anims = rightPlayer.GetComponentsInChildren<Animator>();
+		foreach (Animator anim in anims)
+		{
+			anim.SetTrigger("NormalHitAttackSuccessful");
+		}
+
+		yield return new WaitForSeconds(4.0F);
+
+		AnimationHelper.MoveGO(leftPlayer, enemyAnimation.HitSuc(), enemyAnimation.Start(), time);
+		AnimationHelper.MoveGO(rightPlayer, enemyAnimation.EHitSuc(), enemyAnimation.EStart(), time);
+		AnimationHelper.MoveGO(objectHolder.camera.gameObject, enemyAnimation.CHitSuc(), enemyAnimation.CStart(), time);
+
+	}
+
 	public void SetUserName(string userName)
 	{
 		_userName = userName;
@@ -98,7 +137,7 @@ public class Logic : MonoBehaviour
 			{
 				enemyAnimation = new MaleAnimation();
 				rightPlayer = Instantiate(objectHolder.male);
-				AnimationHelper.SetPosition(rightPlayer, enemyAnimation.EnemyStartPosition());
+				AnimationHelper.SetPosition(rightPlayer, enemyAnimation.EStart());
 				AnimationHelper.SetRotation(rightPlayer, enRot);
 				MaleConstants.Equip(rightPlayer, rightUser.items);
 			}
@@ -117,7 +156,7 @@ public class Logic : MonoBehaviour
 		if (leftUser.sex == User.SEX.MALE)
 		{
 			leftPlayer = Instantiate(objectHolder.male);
-			AnimationHelper.SetPosition(leftPlayer, enemyAnimation.StartPosition());
+			AnimationHelper.SetPosition(leftPlayer, enemyAnimation.Start());
 			MaleConstants.Equip(leftPlayer, leftUser.items);
 		}
 		else
@@ -125,7 +164,7 @@ public class Logic : MonoBehaviour
 			
 		}
 
-		AnimationHelper.SetPosition(objectHolder.camera.gameObject, enemyAnimation.CameraStartPosition());
+		AnimationHelper.SetPosition(objectHolder.camera.gameObject, enemyAnimation.CStart());
 	}
 
 	void ApplyNewUIData()
@@ -373,22 +412,6 @@ public class Logic : MonoBehaviour
 
 		yield return false;
 	}
-
-	//Zanko
-	private void attack(){
-		Animator[] anims;
-		anims = leftPlayer.GetComponentsInChildren<Animator>();
-		foreach (Animator anim in anims)
-		{
-			anim.SetTrigger("NormalHit");
-		}
-		anims = rightPlayer.GetComponentsInChildren<Animator>();
-		foreach (Animator anim in anims)
-		{
-			anim.SetTrigger("NormalHitAttackSuccessful");
-		}
-	}
-
 
 	IEnumerator ProcessEquip(string text)
 	{

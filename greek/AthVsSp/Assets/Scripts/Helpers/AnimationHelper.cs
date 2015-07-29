@@ -20,10 +20,10 @@ public class AnimationHelper
 	public static void MoveGO(GameObject TempGO, Vector3 StartPos, Vector3 EndPos, float length)
 	{
 		AnimationCurve curve1 = null, curve2 = null, curve3 = null;
-		curve1 = AnimationCurve.Linear(0, StartPos.x, length, EndPos.x);
-		curve2 = AnimationCurve.Linear(0, StartPos.y, length, EndPos.y);
-		curve3 = AnimationCurve.Linear(0, StartPos.z, length, EndPos.z);
-		
+		curve1 = AnimationCurve.EaseInOut(0, StartPos.x, length, EndPos.x);
+		curve2 = AnimationCurve.EaseInOut(0, StartPos.y, length, EndPos.y);
+		curve3 = AnimationCurve.EaseInOut(0, StartPos.z, length, EndPos.z);
+
 		AnimationClip clip = new AnimationClip();
 		clip.SetCurve("", typeof(Transform), "localPosition.x", curve1);
 		clip.SetCurve("", typeof(Transform), "localPosition.y", curve2);
