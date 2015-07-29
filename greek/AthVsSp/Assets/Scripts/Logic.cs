@@ -121,6 +121,8 @@ public class Logic : MonoBehaviour
 		{
 			
 		}
+
+		AnimationHelper.SetPosition(objectHolder.camera.gameObject, enemyAnimation.CameraStartPosition());
 	}
 
 	void ApplyNewUIData()
@@ -350,13 +352,13 @@ public class Logic : MonoBehaviour
 			Animator[] anims = leftPlayer.GetComponentsInChildren<Animator>();
 			foreach (Animator anim in anims)
 			{
-				anim.SetTrigger("normal");
+				anim.SetTrigger("NormalHit");
 			}
 			
 			anims = rightPlayer.GetComponentsInChildren<Animator>();
 			foreach (Animator anim in anims)
 			{
-				anim.SetTrigger("block");
+				anim.SetTrigger("NormalHitBlock");//AttackSuccessful");
 			}
 
 //			Vector3 from = 
