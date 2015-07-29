@@ -1,10 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MaleConstants {
-	
-	static public void Equip(GameObject obj, Item[] items)
-	{
+public class MaleConstants 
+{	
+	static public void Equip(GameObject obj, Item[] items){
 		bool needUnderwear = true;
 		bool needHair = true;
 

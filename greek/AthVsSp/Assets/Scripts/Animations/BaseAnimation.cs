@@ -2,7 +2,8 @@
 using System.Collections;
 
 abstract public class BaseAnimation {
-			
+		
+
 	abstract public Vector3 StartPosition();
 	abstract public Vector3 EnemyStartPosition();
 	abstract public Vector3 CameraStartPosition();

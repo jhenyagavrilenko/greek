@@ -8,20 +8,20 @@ using CielaSpike;
 
 public class Logic : MonoBehaviour
 {
-	private int REQUEST_SYNC = 0;
-	private int REQUEST_ACTION = 1;
-	private int REQUEST_EQUIP = 2;
+	private const int REQUEST_SYNC = 0;
+	private const int REQUEST_ACTION = 1;
+	private const int REQUEST_EQUIP = 2;
 
 	private int _battleId = 0;
 	private string _userName = null;
 	private int _opponentId;
-
+	
 	private IEnumerator coroutine;
 	
-	GameObject leftPlayer = null;
-	GameObject rightPlayer = null;
-	User leftUser = null;
-	User rightUser = null;
+	private GameObject leftPlayer;
+	private GameObject rightPlayer;
+	private User leftUser;
+	private User rightUser;
 
 	public ObjectHolder objectHolder;
 
@@ -34,12 +34,15 @@ public class Logic : MonoBehaviour
 
 	bool isAnimation = false;
 
-	// Use this for initialization
+	private Button attackButton;  //Zanko
+
 	void Start()
 	{
+		attackButton = GameObject.Find ("attack").GetComponent<Button>(); //Zanko
+		attackButton.onClick.AddListener (() => { attack(); });           //Zanko
+
 		CanvasGroup group = objectHolder.panel.GetComponent<CanvasGroup>();
 		group.alpha = 0;
-
 		SetBattle(17, "lennondtps@gmail.com"); //lennondtps@gmail.com  player@email.gr
 	}
 
@@ -370,6 +373,22 @@ public class Logic : MonoBehaviour
 
 		yield return false;
 	}
+
+	//Zanko
+	private void attack(){
+		Animator[] anims;
+		anims = leftPlayer.GetComponentsInChildren<Animator>();
+		foreach (Animator anim in anims)
+		{
+			anim.SetTrigger("NormalHit");
+		}
+		anims = rightPlayer.GetComponentsInChildren<Animator>();
+		foreach (Animator anim in anims)
+		{
+			anim.SetTrigger("NormalHitAttackSuccessful");
+		}
+	}
+
 
 	IEnumerator ProcessEquip(string text)
 	{
