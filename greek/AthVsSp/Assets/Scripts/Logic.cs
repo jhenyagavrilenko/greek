@@ -30,6 +30,9 @@ public class Logic : MonoBehaviour
 	public bool playerTurn;
 	public int playerSide;
 
+	private int attackerId = 0;
+	private int defenderId = 0;
+
 	private BaseAnimation enemyAnimation = null;
 
 	bool isAnimation = false;
@@ -225,6 +228,7 @@ public class Logic : MonoBehaviour
 		Action[] belt = new Action[0];
 		Action[] aurSkills = new Action[0];
 		Action[] actSkills = new Action[0];
+		FightInfo fInfo = null;
 
 		try {
 			JsonData data = JsonMapper.ToObject (text);
@@ -238,6 +242,7 @@ public class Logic : MonoBehaviour
 			JsonData gameData = data["data"];
 
 			processSync(gameData, out status, out timer, out actSkills, out aurSkills, out belt);
+			fInfo = processSyncAction(gameData);
 
 		} catch (Exception e) {
 			Debug.Log("WWW Exception!: " + e.Message);
@@ -259,16 +264,36 @@ public class Logic : MonoBehaviour
 			// UI Thread
 			yield return Ninja.JumpToUnity;
 
-			objectHolder.statusLabel.text = status;
-			objectHolder.timer.text = timer.ToString();
-			ApplyNewUIData();
+			bool needUpdate = true;
+
+			if (fInfo != null)
+			{
+
+			}
+
+			if (needUpdate)
+			{
+				objectHolder.statusLabel.text = status;
+				objectHolder.timer.text = timer.ToString();
+				ApplyNewUIData();
+			}
+			else
+			{
+				objectHolder.statusLabel.text = "";
+				objectHolder.timer.text = "";
+			}
 			objectHolder.bHelper.AddButtons(actSkills, aurSkills, belt, objectHolder);
 			objectHolder.bHelper.SetState(objectHolder, status);
-			
+
 			yield return Ninja.JumpBack;
 		}
 
 		yield return false;
+	}
+
+	FightInfo processSyncAction(JsonData gameData)
+	{
+		return null;
 	}
 	
 	void processSync(JsonData gameData, out string status, out int timer, out Action[] actSkills, out Action[] aurSkills, out Action[] belt)
