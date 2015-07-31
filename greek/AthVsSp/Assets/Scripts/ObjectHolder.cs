@@ -2,23 +2,25 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class ObjectHolder : MonoBehaviour {
-		
+public class ObjectHolder : MonoBehaviour 
+{
+	public RectTransform leftMana;
+	public RectTransform leftHealth;
+	public RectTransform rightMana;
+	public RectTransform rightHealth;
+	public Text leftName;
+	public Text rightName;
+	public Text leftHealthText;
+	public Text rightHealthText;
+	public Text leftMagicText;
+	public Text rightMagicText;
+
 	// prefabs
 	public GameObject male;
 	public Button actionButton;
 
 	// UI elements
 	public Text statusLabel;
-	
-	public Text leftName;
-	public Text rightName;
-
-	public GameObject panel;
-	public Slider leftMana;
-	public Slider leftHealth;
-	public Slider rightMana;
-	public Slider rightHealth;
 
 	public Button normalHit = null;
 	public Button[] activeSkills = new Button[0];

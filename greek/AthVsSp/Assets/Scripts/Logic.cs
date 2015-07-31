@@ -46,8 +46,6 @@ public class Logic : MonoBehaviour
 		attackButton = GameObject.Find ("attack").GetComponent<Button>(); //Zanko
 		attackButton.onClick.AddListener (() => { attack(); });           //Zanko
 
-		CanvasGroup group = objectHolder.panel.GetComponent<CanvasGroup>();
-		group.alpha = 0;
 		SetBattle(17, "lennondtps@gmail.com"); //lennondtps@gmail.com  player@email.gr
 	}
 
@@ -118,8 +116,6 @@ public class Logic : MonoBehaviour
 	
 	void AddModels()
 	{
-		CanvasGroup group = objectHolder.panel.GetComponent<CanvasGroup>();
-		group.alpha = 1;
 		if (leftPlayer != null)
 		{
 			Destroy(leftPlayer);
@@ -174,18 +170,16 @@ public class Logic : MonoBehaviour
 
 	void ApplyNewUIData()
 	{
-		objectHolder.leftMana.maxValue = leftUser.maxMana;
-		objectHolder.leftHealth.maxValue = leftUser.maxHealth;
-		objectHolder.rightMana.maxValue = rightUser.maxMana;
-		objectHolder.rightHealth.maxValue = rightUser.maxHealth;
-
-		objectHolder.leftMana.value = leftUser.mana;
-		objectHolder.leftHealth.value = leftUser.health;
-		objectHolder.rightMana.value = rightUser.mana;
-		objectHolder.rightHealth.value = rightUser.health;
-
+		RectTransformExtensions.SetHeight(objectHolder.leftMana, leftUser.mana * 272 / leftUser.maxMana);
+		RectTransformExtensions.SetHeight(objectHolder.leftHealth, leftUser.health * 272 / leftUser.maxHealth);
+		RectTransformExtensions.SetHeight(objectHolder.rightMana, rightUser.mana * 272 / rightUser.maxMana);
+		RectTransformExtensions.SetHeight(objectHolder.rightHealth, rightUser.health * 272 / rightUser.maxHealth);
 		objectHolder.leftName.text = leftUser.name;
 		objectHolder.rightName.text = rightUser.name;
+		objectHolder.leftHealthText.text = "Health:" + '\n' + leftUser.health + "/" + leftUser.maxHealth;
+		objectHolder.leftMagicText.text = "Magic:" + '\n' + leftUser.mana + "/" + leftUser.maxMana;
+		objectHolder.rightHealthText.text = "Health:" + '\n' + rightUser.health + "/" + rightUser.maxHealth;;
+		objectHolder.rightMagicText.text = "Magic:" + '\n' + rightUser.mana + "/" + rightUser.maxMana;
 	}
 
 	public void ButtonPressed(Action action)
