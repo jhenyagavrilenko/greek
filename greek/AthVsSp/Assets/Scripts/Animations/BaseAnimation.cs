@@ -23,4 +23,79 @@ abstract public class BaseAnimation {
 	abstract public Vector3 SucHit();
 	abstract public Vector3 ESucHit();
 	abstract public Vector3 CSucHit();
+
+	public Vector3 GetCameraPosition(bool attacking, string attack, bool block)
+	{
+		if (attacking)
+		{
+			if (attack == "hit")
+			{
+				if (block)
+					return CHitBlock();
+				else 
+					return CHitSuc();
+			}
+		}
+		else
+		{
+			if (attack == "hit")
+			{
+				if (block)
+					return CBlockHit();
+				else 
+					return CSucHit();
+			}
+		}
+		return CStart();
+	}
+
+	public Vector3 GetPosition(bool attacking, string attack, bool block)
+	{
+		if (attacking)
+		{
+			if (attack == "hit")
+			{
+				if (block)
+					return HitBlock();
+				else 
+					return HitSuc();
+			}
+		}
+		else
+		{
+			if (attack == "hit")
+			{
+				if (block)
+					return BlockHit();
+				else 
+					return SucHit();
+			}
+		}
+		return Start();
+	}
+
+	public Vector3 GetEnemyPosition(bool attacking, string attack, bool block)
+	{
+		if (attacking)
+		{
+			if (attack == "hit")
+			{
+				if (block)
+					return EHitBlock();
+				else 
+					return EHitSuc();
+			}
+		}
+		else
+		{
+			if (attack == "hit")
+			{
+				if (block)
+					return EBlockHit();
+				else 
+					return ESucHit();
+			}
+		}
+		return EStart();
+	}
 }

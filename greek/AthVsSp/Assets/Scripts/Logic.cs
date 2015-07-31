@@ -29,13 +29,15 @@ public class Logic : MonoBehaviour
 
 	public bool playerTurn;
 	public int playerSide;
-
-	private int attackerId = 0;
-	private int defenderId = 0;
+	
+	private FightInfo lastFight = new FightInfo();
 
 	private BaseAnimation enemyAnimation = null;
 
 	bool isAnimation = false;
+
+	float movePlayers = 0.01F;
+	float moveCamera = 0.5F;
 
 	private Button attackButton;  //Zanko
 
@@ -242,7 +244,7 @@ public class Logic : MonoBehaviour
 			JsonData gameData = data["data"];
 
 			processSync(gameData, out status, out timer, out actSkills, out aurSkills, out belt);
-			fInfo = processSyncAction(gameData);
+			fInfo = processSyncAction(gameData["action"]);
 
 		} catch (Exception e) {
 			Debug.Log("WWW Exception!: " + e.Message);
@@ -266,9 +268,19 @@ public class Logic : MonoBehaviour
 
 			bool needUpdate = true;
 
-			if (fInfo != null)
-			{
 
+			if (fInfo != null && leftPlayer != null && rightPlayer != null)
+			{
+				if (fInfo == lastFight)
+				{
+					needUpdate = true;
+				}
+				else
+				{
+					needUpdate = false;
+					lastFight = fInfo;
+					startAction(fInfo);
+				}
 			}
 
 			if (needUpdate)
@@ -291,9 +303,72 @@ public class Logic : MonoBehaviour
 		yield return false;
 	}
 
+	void startAction(FightInfo info)
+	{
+		bool attacking = (info.attackerId == leftUser.id);
+		bool block = info.block;
+
+		AnimationHelper.MoveGO(leftPlayer, leftPlayer.transform.position, enemyAnimation.HitSuc(), movePlayers);
+		AnimationHelper.MoveGO(rightPlayer, rightPlayer.transform.position, enemyAnimation.EHitSuc(), movePlayers);
+		AnimationHelper.MoveGO(objectHolder.camera.gameObject, objectHolder.camera.gameObject.transform.position, enemyAnimation.CHitSuc(), moveCamera);
+	}
+
+//	private void attack(){
+//		
+//		
+//		float time = 0.01F;
+//		
+//		AnimationHelper.MoveGO(leftPlayer, enemyAnimation.Start(), enemyAnimation.HitSuc(), time);
+//		AnimationHelper.MoveGO(rightPlayer, enemyAnimation.EStart(), enemyAnimation.EHitSuc(), time);
+//		AnimationHelper.MoveGO(objectHolder.camera.gameObject, enemyAnimation.CStart(), enemyAnimation.CHitSuc(), 0.5F);
+//		
+//		
+//		StartCoroutine(ExecuteAfterTime(time));
+//	}
+//	
+//	IEnumerator ExecuteAfterTime(float time)
+//	{
+//		yield return new WaitForSeconds(time);
+//		
+//		Animator[] anims;
+//		anims = leftPlayer.GetComponentsInChildren<Animator>();
+//		
+//		foreach (Animator anim in anims)
+//		{
+//			anim.SetTrigger("NormalHit");
+//		}
+//		anims = rightPlayer.GetComponentsInChildren<Animator>();
+//		foreach (Animator anim in anims)
+//		{
+//			anim.SetTrigger("NormalHitAttackSuccessful");
+//		}
+//		
+//		yield return new WaitForSeconds(4.0F);
+//		
+//		AnimationHelper.MoveGO(leftPlayer, enemyAnimation.HitSuc(), enemyAnimation.Start(), time);
+//		AnimationHelper.MoveGO(rightPlayer, enemyAnimation.EHitSuc(), enemyAnimation.EStart(), time);
+//		AnimationHelper.MoveGO(objectHolder.camera.gameObject, enemyAnimation.CHitSuc(), enemyAnimation.CStart(), time);
+//		
+//	}
+
 	FightInfo processSyncAction(JsonData gameData)
 	{
-		return null;
+		FightInfo fInfo = new FightInfo();
+
+		int attacker = 0;
+		int defender = 0;
+		int.TryParse((string)gameData["attacker"], out attacker);
+		int.TryParse((string)gameData["defender"], out defender);
+		fInfo.attackerId = attacker;
+		fInfo.defenderId = defender;
+		fInfo.block = (bool)gameData["block"];
+		fInfo.stun = (bool)gameData["stun"];
+		fInfo.critical = (bool)gameData["critical"];
+		fInfo.hitPoints = (int)gameData["hit_points"];
+		fInfo.type = (string)gameData["type"];
+		fInfo.param = (string)gameData["param"];
+
+		return fInfo;
 	}
 	
 	void processSync(JsonData gameData, out string status, out int timer, out Action[] actSkills, out Action[] aurSkills, out Action[] belt)
@@ -379,7 +454,6 @@ public class Logic : MonoBehaviour
 	IEnumerator ProcessAction(string text)
 	{
 		string msg = "";
-		FightInfo fInfo = new FightInfo();
 
 		bool exception = false;
 		try
@@ -391,18 +465,6 @@ public class Logic : MonoBehaviour
 			if (result != "success") {			
 				throw new Exception();
 			}
-
-			JsonData gameData = data["data"];
-
-			msg = (string)data["msg"];
-
-			JsonData fight = gameData["fight"];
-			fInfo.block = (bool)fight["block"];
-			fInfo.stun = (bool)fight["stun"];
-			fInfo.critical = (bool)fight["critical"];
-			int hit = (int)fight["hit_points"];
-			fInfo.hitPoints = hit.ToString();
-
 		}
 		catch (Exception e)
 		{
@@ -416,21 +478,7 @@ public class Logic : MonoBehaviour
 			// UI Thread
 			yield return Ninja.JumpToUnity;
 			
-			Animator[] anims = leftPlayer.GetComponentsInChildren<Animator>();
-			foreach (Animator anim in anims)
-			{
-				anim.SetTrigger("NormalHit");
-			}
-			
-			anims = rightPlayer.GetComponentsInChildren<Animator>();
-			foreach (Animator anim in anims)
-			{
-				anim.SetTrigger("NormalHitBlock");//AttackSuccessful");
-			}
 
-//			Vector3 from = 
-//			Vector3 to = 
-//			AnimationHelper.MoveGO(objectHolder.camera.gameObject, from, to, 1.0f);
 
 			yield return Ninja.JumpBack;
 		}
