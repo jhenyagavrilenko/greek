@@ -8,6 +8,11 @@ using CielaSpike;
 
 public class Logic : MonoBehaviour
 {
+	public ObjectHolder objectHolder;
+	public GameObject testMale;
+	public bool playerTurn;
+	public int playerSide;
+
 	private const int REQUEST_SYNC = 0;
 	private const int REQUEST_ACTION = 1;
 	private const int REQUEST_EQUIP = 2;
@@ -15,51 +20,278 @@ public class Logic : MonoBehaviour
 	private int _battleId = 0;
 	private string _userName = null;
 	private int _opponentId;
-	
 	private IEnumerator coroutine;
-	
 	private GameObject leftPlayer;
 	private GameObject rightPlayer;
 	private User leftUser;
 	private User rightUser;
-
-	public ObjectHolder objectHolder;
-
-	public GameObject testMale;
-
-	public bool playerTurn;
-	public int playerSide;
-	
-	private FightInfo lastFight = new FightInfo();
-
+	private FightInfo lastFight = new FightInfo ();
 	private BaseAnimation enemyAnimation = null;
-
-	bool isAnimation = false;
-
-	float movePlayers = 0.01F;
-	float moveCamera = 0.5F;
-
+	private bool isAnimation = false;
+	private float movePlayers = 0.01F;
+	private float moveCamera = 0.5F;
 	private Button attackButton;  //Zanko
 
 	void Start()
 	{
+		Canvas parent = GameObject.Find ("Canvas").GetComponent<Canvas>();//Zanko
 		attackButton = GameObject.Find ("attack").GetComponent<Button>(); //Zanko
 		attackButton.onClick.AddListener (() => { attack(); });           //Zanko
 
 		SetBattle(17, "lennondtps@gmail.com"); //lennondtps@gmail.com  player@email.gr
 	}
 
-	//Zanko
+	private void SetBattle(int battleId, string userName)
+	{
+		_battleId = battleId;
+		_userName = userName;
+		_opponentId = -1;
+		InvokeRepeating("SyncRequest", 1.0F, 1.0F);
+	}
+
+	private void SyncRequest()
+	{
+		Debug.Log("SyncRequest");
+		if (isAnimation)
+		{
+			return;
+		}
+		string req = "http://api.gw.monospacelabs.com/v1/battle/sync";
+		req += "?battle_id=" + _battleId + "&email=" + _userName;
+		GET(req, REQUEST_SYNC);
+	}
+
+	public void GET(string url, int type)
+	{
+		WWW www = new WWW (url);
+		coroutine = WaitForRequest(www, type);
+		StartCoroutine(coroutine);
+	}
+
+	private IEnumerator WaitForRequest(WWW www, int type)
+	{
+		yield return www;
+		if (www.error == null)
+		{
+			if (type == REQUEST_SYNC)
+			{
+				StartCoroutine(ProcessSync(www.text));
+			}
+			else if (type == REQUEST_ACTION)
+			{
+				StartCoroutine(ProcessAction(www.text));
+			}
+			else if (type == REQUEST_EQUIP)
+			{
+				StartCoroutine(ProcessEquip(www.text));
+			}
+		}
+		else
+		{
+			Debug.Log("WWW Error: "+ www.error);
+		}    
+	}
+
+	IEnumerator ProcessSync(string text)
+	{
+		String status = "";
+		bool exception = false;
+		int timer = 0;
+		
+		Action[] belt = new Action[0];
+		Action[] aurSkills = new Action[0];
+		Action[] actSkills = new Action[0];
+		FightInfo fInfo = null;
+		
+		try {
+			JsonData data = JsonMapper.ToObject (text);
+			Debug.Log ("WWW Sync Ok!: " + text);
+			
+			string result = (string)data["status"];
+			if (result != "success") {
+				throw new Exception();
+			}
+			
+			JsonData gameData = data["data"];
+			
+			processSync(gameData, out status, out timer, out actSkills, out aurSkills, out belt);
+			fInfo = processSyncAction(gameData["action"]);
+			
+		} catch (Exception e) {
+			Debug.Log("WWW Exception!: " + e.Message);
+			CloseApp();
+			exception = true;
+		}
+		
+		if (exception == false)
+		{
+			if (rightUser.id != _opponentId)
+			{
+				string req = "http://api.gw.monospacelabs.com/v1/battle/equipment";
+				req += "?opponent_id=" + rightUser.id + "&email=" + _userName;
+				
+				GET(req, REQUEST_EQUIP);
+				_opponentId = rightUser.id;
+			}
+			
+			// UI Thread
+			yield return Ninja.JumpToUnity;
+			
+			bool needUpdate = true;
+			
+			
+			if (fInfo != null && leftPlayer != null && rightPlayer != null)
+			{
+				if (fInfo == lastFight)
+				{
+					needUpdate = true;
+				}
+				else
+				{
+					needUpdate = false;
+					lastFight = fInfo;
+					startAction(fInfo);
+				}
+			}
+			
+			if (needUpdate)
+			{
+				objectHolder.statusLabel.text = status;
+				objectHolder.timer.text = timer.ToString();
+				ApplyNewUIData();
+			}
+			else
+			{
+				objectHolder.statusLabel.text = "";
+				objectHolder.timer.text = "";
+			}
+			objectHolder.bHelper.AddButtons(actSkills, aurSkills, belt, objectHolder);
+			
+			objectHolder.bHelper.SetState(objectHolder, status);
+			
+			yield return Ninja.JumpBack;
+		}
+		
+		yield return false;
+	}
+
+	IEnumerator ProcessAction(string text)
+	{
+		string msg = "";
+		
+		bool exception = false;
+		try
+		{
+			JsonData data = JsonMapper.ToObject(text);
+			Debug.Log("WWW Action Ok!: " + text);
+			
+			string result = (string)data["status"];
+			if (result != "success") {			
+				throw new Exception();
+			}
+		}
+		catch (Exception e)
+		{
+			Debug.Log("WWW Exception!: " + e.Message);
+			//CloseApp();
+			exception = true;
+		}
+		
+		if (exception == false)
+		{
+			// UI Thread
+			yield return Ninja.JumpToUnity;
+			
+			
+			
+			yield return Ninja.JumpBack;
+		}
+		
+		yield return false;
+	}
+
+	IEnumerator ProcessEquip(string text)
+	{
+		bool exception = false;
+		try
+		{
+			JsonData data = JsonMapper.ToObject(text);
+			Debug.Log("WWW Equip  Ok!: " + text);
+			
+			string result = (string)data["status"];
+			if (result != "success") {
+				throw new Exception();
+			}
+			
+			JsonData gameData = data["data"];
+			JsonData you = gameData["you"];
+			JsonData opponent = gameData["opponent"];
+			
+			string sex = (string)you["sex"];
+			if (sex == "m")
+			{
+				leftUser.sex = User.SEX.MALE;
+			}
+			else
+			{
+				leftUser.sex = User.SEX.FEMALE;
+			}
+			sex = (string)opponent["sex"];
+			if (sex == "m")
+			{
+				rightUser.sex = User.SEX.MALE;
+			}
+			else
+			{
+				rightUser.sex = User.SEX.FEMALE;
+			}
+			
+			leftUser.items = new Item[you["items"].Count];
+			rightUser.items = new Item[opponent["items"].Count];
+			
+			for (int x = 0; x < leftUser.items.Length; x++)
+			{
+				Item item = new Item();
+				item.id = (string)you["items"][x]["id"];
+				item.sets = (string)you["items"][x]["sets"];
+				item.type = (string)you["items"][x]["type"];
+				leftUser.items[x] = item;
+			}
+			for (int x = 0; x < rightUser.items.Length; x++)
+			{
+				Item item = new Item();
+				item.id = (string)opponent["items"][x]["id"];
+				item.sets = (string)opponent["items"][x]["sets"];
+				item.type = (string)opponent["items"][x]["type"];
+				rightUser.items[x] = item;
+			}
+			
+			
+		}
+		catch (Exception e)
+		{
+			Debug.Log("WWW Exception!: " + e.Message);
+			CloseApp();
+			exception = true;
+		}
+		
+		if (exception == false)
+		{
+			// UI Thread
+			yield return Ninja.JumpToUnity;
+			
+			AddModels();
+			
+			yield return Ninja.JumpBack;
+		}
+		yield return false;
+	}
+
 	private void attack(){
-
-
 		float time = 0.01F;
-
 		AnimationHelper.MoveGO(leftPlayer, enemyAnimation.Start(), enemyAnimation.HitSuc(), time);
 		AnimationHelper.MoveGO(rightPlayer, enemyAnimation.EStart(), enemyAnimation.EHitSuc(), time);
 		AnimationHelper.MoveGO(objectHolder.camera.gameObject, enemyAnimation.CStart(), enemyAnimation.CHitSuc(), 0.5F);
-
-
 		StartCoroutine(ExecuteAfterTime(time));
 	}
 
@@ -104,14 +336,6 @@ public class Logic : MonoBehaviour
 		{
 			SetBattle(_battleId, _userName);
 		}
-	}
-
-	public void SetBattle(int battleId, string userName)
-	{
-		_battleId = battleId;
-		_userName = userName;
-		_opponentId = -1;
-		InvokeRepeating("SyncRequest", 1.0F, 1.0F);
 	}
 	
 	void AddModels()
@@ -170,16 +394,16 @@ public class Logic : MonoBehaviour
 
 	void ApplyNewUIData()
 	{
-		RectTransformExtensions.SetHeight(objectHolder.leftMana, leftUser.mana * 272 / leftUser.maxMana);
-		RectTransformExtensions.SetHeight(objectHolder.leftHealth, leftUser.health * 272 / leftUser.maxHealth);
-		RectTransformExtensions.SetHeight(objectHolder.rightMana, rightUser.mana * 272 / rightUser.maxMana);
-		RectTransformExtensions.SetHeight(objectHolder.rightHealth, rightUser.health * 272 / rightUser.maxHealth);
 		objectHolder.leftName.text = leftUser.name;
 		objectHolder.rightName.text = rightUser.name;
 		objectHolder.leftHealthText.text = "Health:" + '\n' + leftUser.health + "/" + leftUser.maxHealth;
 		objectHolder.leftMagicText.text = "Magic:" + '\n' + leftUser.mana + "/" + leftUser.maxMana;
 		objectHolder.rightHealthText.text = "Health:" + '\n' + rightUser.health + "/" + rightUser.maxHealth;;
 		objectHolder.rightMagicText.text = "Magic:" + '\n' + rightUser.mana + "/" + rightUser.maxMana;
+		RectTransformExtensions.SetHeightAnimated(objectHolder.leftMana, leftUser.mana * 272 / leftUser.maxMana,5);
+		RectTransformExtensions.SetHeightAnimated(objectHolder.leftHealth, leftUser.health * 272 / leftUser.maxHealth,5);
+		RectTransformExtensions.SetHeightAnimated(objectHolder.rightMana, rightUser.mana * 272 / rightUser.maxMana,5);
+		RectTransformExtensions.SetHeightAnimated(objectHolder.rightHealth, rightUser.health * 272 / rightUser.maxHealth,5);
 	}
 
 	public void ButtonPressed(Action action)
@@ -200,102 +424,6 @@ public class Logic : MonoBehaviour
 		
 		POST(req, dict, REQUEST_ACTION);
 	}
-	
-	void SyncRequest()
-	{
-		Debug.Log("SyncRequest");
-		if (isAnimation)
-		{
-			return;
-		}
-	
-		string req = "http://api.gw.monospacelabs.com/v1/battle/sync";
-		req += "?battle_id=" + _battleId + "&email=" + _userName;
-
-		GET(req, REQUEST_SYNC);
-	}
-
-	IEnumerator ProcessSync(string text)
-	{
-		String status = "";
-		bool exception = false;
-		int timer = 0;
-
-		Action[] belt = new Action[0];
-		Action[] aurSkills = new Action[0];
-		Action[] actSkills = new Action[0];
-		FightInfo fInfo = null;
-
-		try {
-			JsonData data = JsonMapper.ToObject (text);
-			Debug.Log ("WWW Sync Ok!: " + text);
-
-			string result = (string)data["status"];
-			if (result != "success") {
-				throw new Exception();
-			}
-
-			JsonData gameData = data["data"];
-
-			processSync(gameData, out status, out timer, out actSkills, out aurSkills, out belt);
-			fInfo = processSyncAction(gameData["action"]);
-
-		} catch (Exception e) {
-			Debug.Log("WWW Exception!: " + e.Message);
-			CloseApp();
-			exception = true;
-		}
-
-		if (exception == false)
-		{
-			if (rightUser.id != _opponentId)
-			{
-				string req = "http://api.gw.monospacelabs.com/v1/battle/equipment";
-				req += "?opponent_id=" + rightUser.id + "&email=" + _userName;
-				
-				GET(req, REQUEST_EQUIP);
-				_opponentId = rightUser.id;
-			}
-			
-			// UI Thread
-			yield return Ninja.JumpToUnity;
-
-			bool needUpdate = true;
-
-
-			if (fInfo != null && leftPlayer != null && rightPlayer != null)
-			{
-				if (fInfo == lastFight)
-				{
-					needUpdate = true;
-				}
-				else
-				{
-					needUpdate = false;
-					lastFight = fInfo;
-					startAction(fInfo);
-				}
-			}
-
-			if (needUpdate)
-			{
-				objectHolder.statusLabel.text = status;
-				objectHolder.timer.text = timer.ToString();
-				ApplyNewUIData();
-			}
-			else
-			{
-				objectHolder.statusLabel.text = "";
-				objectHolder.timer.text = "";
-			}
-			objectHolder.bHelper.AddButtons(actSkills, aurSkills, belt, objectHolder);
-			objectHolder.bHelper.SetState(objectHolder, status);
-
-			yield return Ninja.JumpBack;
-		}
-
-		yield return false;
-	}
 
 	void startAction(FightInfo info)
 	{
@@ -307,43 +435,6 @@ public class Logic : MonoBehaviour
 		AnimationHelper.MoveGO(objectHolder.camera.gameObject, objectHolder.camera.gameObject.transform.position, enemyAnimation.CHitSuc(), moveCamera);
 	}
 
-//	private void attack(){
-//		
-//		
-//		float time = 0.01F;
-//		
-//		AnimationHelper.MoveGO(leftPlayer, enemyAnimation.Start(), enemyAnimation.HitSuc(), time);
-//		AnimationHelper.MoveGO(rightPlayer, enemyAnimation.EStart(), enemyAnimation.EHitSuc(), time);
-//		AnimationHelper.MoveGO(objectHolder.camera.gameObject, enemyAnimation.CStart(), enemyAnimation.CHitSuc(), 0.5F);
-//		
-//		
-//		StartCoroutine(ExecuteAfterTime(time));
-//	}
-//	
-//	IEnumerator ExecuteAfterTime(float time)
-//	{
-//		yield return new WaitForSeconds(time);
-//		
-//		Animator[] anims;
-//		anims = leftPlayer.GetComponentsInChildren<Animator>();
-//		
-//		foreach (Animator anim in anims)
-//		{
-//			anim.SetTrigger("NormalHit");
-//		}
-//		anims = rightPlayer.GetComponentsInChildren<Animator>();
-//		foreach (Animator anim in anims)
-//		{
-//			anim.SetTrigger("NormalHitAttackSuccessful");
-//		}
-//		
-//		yield return new WaitForSeconds(4.0F);
-//		
-//		AnimationHelper.MoveGO(leftPlayer, enemyAnimation.HitSuc(), enemyAnimation.Start(), time);
-//		AnimationHelper.MoveGO(rightPlayer, enemyAnimation.EHitSuc(), enemyAnimation.EStart(), time);
-//		AnimationHelper.MoveGO(objectHolder.camera.gameObject, enemyAnimation.CHitSuc(), enemyAnimation.CStart(), time);
-//		
-//	}
 
 	FightInfo processSyncAction(JsonData gameData)
 	{
@@ -444,131 +535,12 @@ public class Logic : MonoBehaviour
 			belt[x] = skill;
 		}
 	}
-
-	IEnumerator ProcessAction(string text)
-	{
-		string msg = "";
-
-		bool exception = false;
-		try
-		{
-			JsonData data = JsonMapper.ToObject(text);
-			Debug.Log("WWW Action Ok!: " + text);
-			
-			string result = (string)data["status"];
-			if (result != "success") {			
-				throw new Exception();
-			}
-		}
-		catch (Exception e)
-		{
-			Debug.Log("WWW Exception!: " + e.Message);
-			//CloseApp();
-			exception = true;
-		}
-
-		if (exception == false)
-		{
-			// UI Thread
-			yield return Ninja.JumpToUnity;
-			
-
-
-			yield return Ninja.JumpBack;
-		}
-
-		yield return false;
-	}
-
-	IEnumerator ProcessEquip(string text)
-	{
-		bool exception = false;
-		try
-		{
-			JsonData data = JsonMapper.ToObject(text);
-			Debug.Log("WWW Equip  Ok!: " + text);
-			
-			string result = (string)data["status"];
-			if (result != "success") {
-				throw new Exception();
-			}
-
-			JsonData gameData = data["data"];
-			JsonData you = gameData["you"];
-			JsonData opponent = gameData["opponent"];
-
-			string sex = (string)you["sex"];
-			if (sex == "m")
-			{
-				leftUser.sex = User.SEX.MALE;
-			}
-			else
-			{
-				leftUser.sex = User.SEX.FEMALE;
-			}
-			sex = (string)opponent["sex"];
-			if (sex == "m")
-			{
-				rightUser.sex = User.SEX.MALE;
-			}
-			else
-			{
-				rightUser.sex = User.SEX.FEMALE;
-			}
-
-			leftUser.items = new Item[you["items"].Count];
-			rightUser.items = new Item[opponent["items"].Count];
-
-			for (int x = 0; x < leftUser.items.Length; x++)
-			{
-				Item item = new Item();
-				item.id = (string)you["items"][x]["id"];
-				item.sets = (string)you["items"][x]["sets"];
-				item.type = (string)you["items"][x]["type"];
-				leftUser.items[x] = item;
-			}
-			for (int x = 0; x < rightUser.items.Length; x++)
-			{
-				Item item = new Item();
-				item.id = (string)opponent["items"][x]["id"];
-				item.sets = (string)opponent["items"][x]["sets"];
-				item.type = (string)opponent["items"][x]["type"];
-				rightUser.items[x] = item;
-			}
-
-
-		}
-		catch (Exception e)
-		{
-			Debug.Log("WWW Exception!: " + e.Message);
-			CloseApp();
-			exception = true;
-		}
-
-		if (exception == false)
-		{
-			// UI Thread
-			yield return Ninja.JumpToUnity;
-			
-			AddModels();
-			
-			yield return Ninja.JumpBack;
-		}
-		yield return false;
-	}
-
+	
 	void CloseApp()
 	{
 		Debug.Log("Fatal Error");
 		StopCoroutine(coroutine);
 		CancelInvoke("SyncRequest");
-	}
-
-	public void GET(string url, int type)
-	{
-		WWW www = new WWW (url);
-		coroutine = WaitForRequest(www, type);
-		StartCoroutine(coroutine);
 	}
 	
 	public void POST(string url, Dictionary<string,string> post, int type)
@@ -581,32 +553,6 @@ public class Logic : MonoBehaviour
 		WWW www = new WWW(url, form);
 		
 		StartCoroutine(WaitForRequest(www, type)); 
-	}
-	
-	private IEnumerator WaitForRequest(WWW www, int type)
-	{
-		yield return www;
-		
-		// check for errors
-		if (www.error == null)
-		{
-			if (type == REQUEST_SYNC)
-			{
-				StartCoroutine(ProcessSync(www.text));
-			}
-			else if (type == REQUEST_ACTION)
-			{
-				StartCoroutine(ProcessAction(www.text));
-			}
-			else if (type == REQUEST_EQUIP)
-			{
-				StartCoroutine(ProcessEquip(www.text));
-			}
-		}
-		else
-		{
-			Debug.Log("WWW Error: "+ www.error);
-		}    
 	}
 
 	static public bool JsonDataContainsKey(JsonData data,string key)

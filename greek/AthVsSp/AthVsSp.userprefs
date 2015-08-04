@@ -1,19 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Logic.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Helpers/ButtonHelper.cs">
     <Files>
-      <File FileName="Assets/Scripts/ObjectHolder.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Logic.cs" Line="206" Column="1" />
-      <File FileName="Assets/Scripts/User.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/MaleConstants.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Helpers/ButtonHelper.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Helpers/AnimationHelper.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Animations/BaseAnimation.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Animations/MaleAnimation.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Zanko/NormalHitPosition.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Item.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Action.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/RectTransformExtensions.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Logic.cs" Line="156" Column="4" />
+      <File FileName="Assets/Scripts/ObjectHolder.cs" Line="27" Column="51" />
+      <File FileName="Assets/Scripts/Helpers/ButtonHelper.cs" Line="15" Column="59" />
+      <File FileName="Assets/Scripts/Zanko/UIScene/ButtonIcon.cs" Line="11" Column="30" />
+      <File FileName="Assets/Scripts/Action.cs" Line="26" Column="1" />
+      <File FileName="Assets/Scripts/MaleConstants.cs" Line="152" Column="1" />
+      <File FileName="Assets/Scripts/ActionButton.cs" Line="6" Column="11" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

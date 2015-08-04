@@ -22,17 +22,16 @@ public class ObjectHolder : MonoBehaviour
 	// UI elements
 	public Text statusLabel;
 
-	public Button normalHit = null;
-	public Button[] activeSkills = new Button[0];
-	public Button[] auraSkills = new Button[0];
-	public Button[] belt = new Button[0];
+	public ButtonIcon normalHit = null;
+	public ButtonIcon[] activeSkills = new ButtonIcon[0];
+	public ButtonIcon[] auraSkills = new ButtonIcon[0];
+	public ButtonIcon[] belt = new ButtonIcon[0];
 
 	public Canvas canvas;
-
 	public Text timer;
-
 	public Camera camera;
 
 	// Helpers
 	public ButtonHelper bHelper = new ButtonHelper();
 }
+
