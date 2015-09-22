@@ -1,14 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Helpers/ButtonHelper.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Logic.cs">
     <Files>
-      <File FileName="Assets/Scripts/Logic.cs" Line="156" Column="4" />
-      <File FileName="Assets/Scripts/ObjectHolder.cs" Line="27" Column="51" />
-      <File FileName="Assets/Scripts/Helpers/ButtonHelper.cs" Line="15" Column="59" />
-      <File FileName="Assets/Scripts/Zanko/UIScene/ButtonIcon.cs" Line="11" Column="30" />
-      <File FileName="Assets/Scripts/Action.cs" Line="26" Column="1" />
-      <File FileName="Assets/Scripts/MaleConstants.cs" Line="152" Column="1" />
-      <File FileName="Assets/Scripts/ActionButton.cs" Line="6" Column="11" />
+      <File FileName="Assets/Scripts/Logic.cs" Line="559" Column="68" />
+      <File FileName="Assets/Scripts/MaleConstants.cs" Line="56" Column="6" />
+      <File FileName="Assets/Resources/ButtonIcon/ButtonIcon.cs" Line="30" Column="88" />
+      <File FileName="Assets/Scripts/Action.cs" Line="6" Column="18" />
+      <File FileName="Assets/Scripts/User.cs" Line="33" Column="35" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

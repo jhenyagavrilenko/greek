@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using LitJson;
@@ -34,11 +34,10 @@ public class Logic : MonoBehaviour
 
 	void Start()
 	{
-		Canvas parent = GameObject.Find ("Canvas").GetComponent<Canvas>();//Zanko
 		attackButton = GameObject.Find ("attack").GetComponent<Button>(); //Zanko
 		attackButton.onClick.AddListener (() => { attack(); });           //Zanko
 
-		SetBattle(17, "lennondtps@gmail.com"); //lennondtps@gmail.com  player@email.gr
+		SetBattle(18, "lennondtps@gmail.com"); //lennondtps@gmail.com  player@email.gr
 	}
 
 	private void SetBattle(int battleId, string userName)
@@ -51,7 +50,6 @@ public class Logic : MonoBehaviour
 
 	private void SyncRequest()
 	{
-		Debug.Log("SyncRequest");
 		if (isAnimation)
 		{
 			return;
@@ -85,6 +83,7 @@ public class Logic : MonoBehaviour
 			{
 				StartCoroutine(ProcessEquip(www.text));
 			}
+
 		}
 		else
 		{
@@ -108,6 +107,7 @@ public class Logic : MonoBehaviour
 			Debug.Log ("WWW Sync Ok!: " + text);
 			
 			string result = (string)data["status"];
+			Debug.Log ("result: " + result);
 			if (result != "success") {
 				throw new Exception();
 			}
@@ -165,7 +165,7 @@ public class Logic : MonoBehaviour
 				objectHolder.statusLabel.text = "";
 				objectHolder.timer.text = "";
 			}
-			objectHolder.bHelper.AddButtons(actSkills, aurSkills, belt, objectHolder);
+			objectHolder.bHelper.InitButtons(actSkills, aurSkills, belt, objectHolder);
 			
 			objectHolder.bHelper.SetState(objectHolder, status);
 			
@@ -176,9 +176,7 @@ public class Logic : MonoBehaviour
 	}
 
 	IEnumerator ProcessAction(string text)
-	{
-		string msg = "";
-		
+	{	
 		bool exception = false;
 		try
 		{
@@ -192,18 +190,14 @@ public class Logic : MonoBehaviour
 		}
 		catch (Exception e)
 		{
-			Debug.Log("WWW Exception!: " + e.Message);
-			//CloseApp();
+			Debug.Log("WWW Exception!: " + e.Message);;
 			exception = true;
 		}
 		
 		if (exception == false)
 		{
-			// UI Thread
 			yield return Ninja.JumpToUnity;
-			
-			
-			
+
 			yield return Ninja.JumpBack;
 		}
 		
@@ -291,7 +285,7 @@ public class Logic : MonoBehaviour
 		float time = 0.01F;
 		AnimationHelper.MoveGO(leftPlayer, enemyAnimation.Start(), enemyAnimation.HitSuc(), time);
 		AnimationHelper.MoveGO(rightPlayer, enemyAnimation.EStart(), enemyAnimation.EHitSuc(), time);
-		AnimationHelper.MoveGO(objectHolder.camera.gameObject, enemyAnimation.CStart(), enemyAnimation.CHitSuc(), 0.5F);
+		AnimationHelper.MoveGO(objectHolder.mainCamera.gameObject, enemyAnimation.CStart(), enemyAnimation.CHitSuc(), 0.5F);
 		StartCoroutine(ExecuteAfterTime(time));
 	}
 
@@ -301,7 +295,6 @@ public class Logic : MonoBehaviour
 
 		Animator[] anims;
 		anims = leftPlayer.GetComponentsInChildren<Animator>();
-		
 		foreach (Animator anim in anims)
 		{
 			anim.SetTrigger("NormalHit");
@@ -316,8 +309,7 @@ public class Logic : MonoBehaviour
 
 		AnimationHelper.MoveGO(leftPlayer, enemyAnimation.HitSuc(), enemyAnimation.Start(), time);
 		AnimationHelper.MoveGO(rightPlayer, enemyAnimation.EHitSuc(), enemyAnimation.EStart(), time);
-		AnimationHelper.MoveGO(objectHolder.camera.gameObject, enemyAnimation.CHitSuc(), enemyAnimation.CStart(), time);
-
+		AnimationHelper.MoveGO(objectHolder.mainCamera.gameObject, enemyAnimation.CHitSuc(), enemyAnimation.CStart(), time);
 	}
 
 	public void SetUserName(string userName)
@@ -368,7 +360,11 @@ public class Logic : MonoBehaviour
 			}
 			else
 			{
-
+				enemyAnimation = new MaleAnimation();
+				rightPlayer = Instantiate(objectHolder.female);
+				AnimationHelper.SetPosition(rightPlayer, enemyAnimation.EStart());
+				AnimationHelper.SetRotation(rightPlayer, enRot);
+				FemaleConstants.Equip(rightPlayer, rightUser.items);
 			}
 		}
 
@@ -386,10 +382,12 @@ public class Logic : MonoBehaviour
 		}
 		else
 		{
-			
+			leftPlayer = Instantiate(objectHolder.female);
+			AnimationHelper.SetPosition(leftPlayer, enemyAnimation.Start());
+			FemaleConstants.Equip(leftPlayer, leftUser.items);
 		}
 
-		AnimationHelper.SetPosition(objectHolder.camera.gameObject, enemyAnimation.CStart());
+		AnimationHelper.SetPosition(objectHolder.mainCamera.gameObject, enemyAnimation.CStart());
 	}
 
 	void ApplyNewUIData()
@@ -400,28 +398,35 @@ public class Logic : MonoBehaviour
 		objectHolder.leftMagicText.text = "Magic:" + '\n' + leftUser.mana + "/" + leftUser.maxMana;
 		objectHolder.rightHealthText.text = "Health:" + '\n' + rightUser.health + "/" + rightUser.maxHealth;;
 		objectHolder.rightMagicText.text = "Magic:" + '\n' + rightUser.mana + "/" + rightUser.maxMana;
-		RectTransformExtensions.SetHeightAnimated(objectHolder.leftMana, leftUser.mana * 272 / leftUser.maxMana,5);
-		RectTransformExtensions.SetHeightAnimated(objectHolder.leftHealth, leftUser.health * 272 / leftUser.maxHealth,5);
-		RectTransformExtensions.SetHeightAnimated(objectHolder.rightMana, rightUser.mana * 272 / rightUser.maxMana,5);
-		RectTransformExtensions.SetHeightAnimated(objectHolder.rightHealth, rightUser.health * 272 / rightUser.maxHealth,5);
+		RectTransformExtensions.SetHeight(objectHolder.leftMana, leftUser.mana * 272 / leftUser.maxMana);
+		RectTransformExtensions.SetHeight(objectHolder.leftHealth, leftUser.health * 272 / leftUser.maxHealth);
+		RectTransformExtensions.SetHeight(objectHolder.rightMana, rightUser.mana * 272 / rightUser.maxMana);
+		RectTransformExtensions.SetHeight(objectHolder.rightHealth, rightUser.health * 272 / rightUser.maxHealth);
 	}
 
-	public void ButtonPressed(Action action)
+	public void ButtonPostAction(Action action)
 	{
-		Debug.Log(action.type);
-
 		objectHolder.bHelper.SetState(objectHolder, "It is not your turn");
-
 		string req = "http://api.gw.monospacelabs.com/v1/battle/action";
-		
 		Dictionary<string,string> dict = new Dictionary<string,string>();
 		dict["email"] = _userName; //  
 		string battleId = "";
 		battleId = _battleId.ToString();
 		dict["battle_id"] = battleId; // 16
 		dict["type"] = action.type;
-		dict["param"] = "normal";
-		
+		switch (action.type) 
+		{
+			case "hit":  
+				dict["param"] = "normal";
+				break;
+			case "skill":
+				dict["param"] = action.id;
+				break;
+			case "item":
+				dict["param"] = action.itemId;
+				break;
+			default: break;
+		}
 		POST(req, dict, REQUEST_ACTION);
 	}
 
@@ -432,7 +437,7 @@ public class Logic : MonoBehaviour
 
 		AnimationHelper.MoveGO(leftPlayer, leftPlayer.transform.position, enemyAnimation.HitSuc(), movePlayers);
 		AnimationHelper.MoveGO(rightPlayer, rightPlayer.transform.position, enemyAnimation.EHitSuc(), movePlayers);
-		AnimationHelper.MoveGO(objectHolder.camera.gameObject, objectHolder.camera.gameObject.transform.position, enemyAnimation.CHitSuc(), moveCamera);
+		AnimationHelper.MoveGO(objectHolder.mainCamera.gameObject, objectHolder.mainCamera.gameObject.transform.position, enemyAnimation.CHitSuc(), moveCamera);
 	}
 
 
@@ -442,6 +447,10 @@ public class Logic : MonoBehaviour
 
 		int attacker = 0;
 		int defender = 0;
+		if (gameData.IsObject == false)
+		{
+			return null;
+		}
 		int.TryParse((string)gameData["attacker"], out attacker);
 		int.TryParse((string)gameData["defender"], out defender);
 		fInfo.attackerId = attacker;
@@ -479,7 +488,6 @@ public class Logic : MonoBehaviour
 		int.TryParse ((string)attr["life_current"], out leftUser.health);
 		int.TryParse ((string)attr["mana"], out leftUser.maxMana);
 		int.TryParse ((string)attr["mana_current"], out leftUser.mana);
-		
 		int.TryParse ((string)attr["side"], out leftUser.side);
 		
 		leftUser.name = "You";
@@ -490,7 +498,9 @@ public class Logic : MonoBehaviour
 		int.TryParse ((string)enemy["life_current"], out rightUser.health);
 		int.TryParse ((string)enemy["mana"], out rightUser.maxMana);
 		int.TryParse ((string)enemy["mana_current"], out rightUser.mana);
-		
+		int.TryParse ((string)enemy["pivot"]["side"], out rightUser.side);
+
+
 		rightUser.name = (string)enemy["username"];
 
 		timer = (int)gameData["turn"]["time"];
@@ -534,8 +544,36 @@ public class Logic : MonoBehaviour
 			skill.itemId = (string)gameData["you"]["belt"][x]["item_id"];
 			belt[x] = skill;
 		}
+
+		parseOthers (gameData);
 	}
-	
+
+	void parseOthers(JsonData gameData)
+	{
+		string[] users = new string[gameData["others"].Count];
+		int[] sides = new int[gameData["others"].Count];
+		
+		for (int x = 0; x < users.Length; x++)
+		{
+			users[x] = (string)gameData["others"][x]["username"];
+			int.TryParse ((string)gameData["others"][x]["pivot"]["side"], out sides[x]);
+		}
+
+		for (int x = 0; x < users.Length; x++)
+		{
+			if(leftUser.side == sides[x]){
+				leftUser.side++;
+			}
+			if(rightUser.side == sides[x]){
+				rightUser.side++;
+			}
+			
+		}
+		leftUser.addSideToName (leftUser.side);
+		rightUser.addSideToName (rightUser.side);
+
+	}
+
 	void CloseApp()
 	{
 		Debug.Log("Fatal Error");

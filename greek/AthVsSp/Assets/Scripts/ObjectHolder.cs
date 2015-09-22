@@ -17,7 +17,7 @@ public class ObjectHolder : MonoBehaviour
 
 	// prefabs
 	public GameObject male;
-	public Button actionButton;
+	public GameObject female;
 
 	// UI elements
 	public Text statusLabel;
@@ -29,7 +29,7 @@ public class ObjectHolder : MonoBehaviour
 
 	public Canvas canvas;
 	public Text timer;
-	public Camera camera;
+	public Camera mainCamera;
 
 	// Helpers
 	public ButtonHelper bHelper = new ButtonHelper();

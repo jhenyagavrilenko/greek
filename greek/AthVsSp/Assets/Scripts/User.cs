@@ -28,4 +28,8 @@ public class User
 	public User(bool monster){
 		isMonster = monster;
 	}
+
+	public void addSideToName(int side){
+		name = name + " (" + side + ")";
+	}
 }

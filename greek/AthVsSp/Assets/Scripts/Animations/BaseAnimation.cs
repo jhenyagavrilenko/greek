@@ -24,6 +24,10 @@ abstract public class BaseAnimation {
 	abstract public Vector3 ESucHit();
 	abstract public Vector3 CSucHit();
 
+	abstract public Vector3 HitDeath();
+	abstract public Vector3 EHitDeath();
+	abstract public Vector3 CHitDeath();
+
 	public Vector3 GetCameraPosition(bool attacking, string attack, bool block)
 	{
 		if (attacking)
